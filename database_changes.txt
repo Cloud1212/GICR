@@ -1,0 +1,34 @@
+CREATE TABLE [dbo].[excel](
+	[id_excel] [int] IDENTITY(1,1) NOT NULL,
+	[num] [int] NULL,
+	[ord_num] [varchar](20) NULL,
+	[clave_1] [varchar](10) NULL,
+	[dan] [varchar](50) NULL,
+	[modelo] [varchar](15) NULL,
+	[tpw] [date] NULL,
+	[fecha_estimada_entrega] [date] NULL,
+	[vin] [varchar](20) NULL,
+	[antiguedad_inventario] [int] NULL,
+	[clave_2] [varchar](10) NULL,
+	[color_secundario] [varchar](10) NULL,
+	[vestidura] [varchar](10) NULL,
+	[modificado] [varchar](5) NULL,
+	[inventario_no] [varchar](50) NULL,
+	[paquete] [varchar](10) NULL,
+	[anio_modelo] [numeric](4, 0) NULL,
+	[gpo_asig] [varchar](15) NULL,
+	[clave_3] [int] NULL,
+	[calve_4] [varchar](50) NULL,
+	[clave_5] [varchar](15) NULL,
+	[embarcar_bac] [int] NULL,
+	[embarcar_bfc] [numeric](5, 0) NULL,
+	[clave_6] [varchar](10) NULL,
+	[evento_actual] [varchar](10) NULL,
+	[fecha_evento_actual] [date] NULL,
+	[opciones_ordenadas] [varchar](160) NULL,
+	[nombre_cliente] [varchar](60) NULL,
+ CONSTRAINT [PK_excel] PRIMARY KEY CLUSTERED 
+(
+	[id_excel] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
