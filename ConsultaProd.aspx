@@ -1,8 +1,10 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaExist.aspx.vb" Inherits="ConsultaExist" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaProd.aspx.vb" Inherits="ConsultaProd" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-
+        .auto-style1 {
+            width: 191px;
+        }
         .auto-style2 {
             width: 191px;
             height: 34px;
@@ -10,27 +12,12 @@
         .auto-style3 {
             height: 34px;
         }
-        .auto-style1 {
-            width: 191px;
-        }
-        </style>
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-    
-   
-
-<body>
-    
-    <div>
-    
-        <br />
-        <table style="width:100%;">
+    <table style="width:100%;">
         <tr>
-            <td class="auto-style2">Consulta Existencias</td>
+            <td class="auto-style2">Consulta Producto</td>
             <td class="auto-style3"></td>
             <td class="auto-style3"></td>
         </tr>
@@ -83,11 +70,5 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    
-    </div>
-   
-</body>
-</html>
-
 </asp:Content>
 

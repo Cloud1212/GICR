@@ -1,39 +1,67 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="SubeArchivo.aspx.vb" Inherits="SubeArchivo" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="SubeArchivo.aspx.vb" Inherits="SubeArchivo" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div style="margin-left: 160px">
+    <!DOCTYPE html>
+
+    <div>
     
     
     
+        
+    
+    
+    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+    
+        
+    
+    
+    
+        Carga de Archivos<br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    
+    
+    
+        
+    
+    
+    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+    
+        
     
     
     
         <asp:Image ID="imgArchivo" runat="server" Height="57px" Width="82px" ImageUrl="~/Imagenes/excel.jpg"  />
         <br />
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:FileUpload ID="fuArchivo" runat="server" />
         <br />
         <br />
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnSubir" runat="server" Text="Subir Archivo" />
     
     
     
     </div>
-    </form>
+    
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title></title>
+</head>
+<body>
+   
 </body>
 </html>
+
+</asp:Content>
+
