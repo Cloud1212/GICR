@@ -8,8 +8,8 @@
     <link href="GICR.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server" accept-charset="utf-8" autocomplete="off" method="post" role="form">
-        <div role="form">
+    <form id="form1" runat="server" accept-charset="utf-8" autocomplete="off" method="post">
+        <div role="login">
             <table class="login center">
                 <thead>
                     <tr>
@@ -37,7 +37,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="2">
-                            <asp:Button ID="btn_entrar" runat="server" Text="Entrar" CssClass="btn" />
+                            <asp:Button ID="btn_entrar" runat="server" Text="Entrar" CssClass="btn primary" />
                         </td>
                     </tr>
                 </tfoot>
