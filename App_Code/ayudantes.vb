@@ -1,6 +1,25 @@
 ﻿Imports Microsoft.VisualBasic
-
 Public Class Ayudante
+    Public Function byte_a(ByRef tamanio As Integer, Optional ByRef escala As String = "M") As Double
+        ' escalas pueden ser:
+        ' K, M, T
+        Dim base As Integer = 1
+        Select Case UCase(escala)
+            Case "K"
+                base = 1024
+            Case "M"
+                base = 1024 ^ 2
+            Case "T"
+                base = 1024 ^ 3
+            Case Else
+                Return tamanio
+        End Select
+        Return tamanio / base
+    End Function
+    Public Function extraeExtencion(ByRef nombreArchivo As String) As String
+        Dim regExp As New Regex(".\w+$")
+        Return regExp.Match(nombreArchivo).ToString
+    End Function
     Public Function unicoID(ByRef texto As String) As String
         Return texto + Guid.NewGuid.ToString + Guid.NewGuid.ToString
     End Function

@@ -41,11 +41,14 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style1">Vista de Color</td>
             <td>
-                <asp:FileUpload ID="fuFoto" runat="server" />
-                <asp:CustomValidator ID="cvFoto" ControlToValidate ="fuFoto" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
+                <asp:FileUpload ID="fulColor" runat="server" />
+                
+                <asp:CustomValidator ID="csvColor" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
+                
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -68,6 +71,6 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <script src="./path/to/dropzone.js"></script>
+    
 </asp:Content>
 

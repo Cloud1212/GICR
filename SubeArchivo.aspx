@@ -43,7 +43,11 @@
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:FileUpload ID="fuArchivo" runat="server" />
+        <asp:FileUpload ID="fuArchivo" runat="server" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" />
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
         <br />
         <br />
         <br />

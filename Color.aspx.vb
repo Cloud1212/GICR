@@ -4,18 +4,8 @@ Imports System.Data.SqlClient
 Partial Class Color
     Inherits System.Web.UI.Page
 
-    
-
-    Protected Sub cvFoto_ServerValidate(source As Object, args As ServerValidateEventArgs) Handles cvFoto.ServerValidate
-        args.IsValid = False
-        If fuFoto.HasFile Then
-            args.IsValid = True
-        Else
-            cvFoto.ErrorMessage = "Elija una foto para el color"
-        End If
-    End Sub
-
     Protected Sub btnGuarda_Click(sender As Object, e As EventArgs) Handles btnGuarda.Click
+
         If Page.IsValid Then
 
 
@@ -24,7 +14,9 @@ Partial Class Color
             Dim query As String
 
             query = "insert into color_auto values ('{0}','{1}','{2}')"
-            query = String.Format(query, txtColor.Text, txtDesc.Text, fuFoto.FileName)
+            query = String.Format(query, txtColor.Text, txtDesc.Text, fulColor.FileName)
+            fulColor.SaveAs(HttpContext.Current.Server.MapPath("~/imagenes/colores/" & fulColor.FileName))
+
             ds = cl.retrieve(query, CommandType.Text)
             Response.Write("<script languaje=javascript> alert('Color ingresado con éxito');</script>")
 
@@ -60,5 +52,16 @@ Partial Class Color
             End If
         End If
 
+    End Sub
+
+  
+   
+    Protected Sub csvColor_ServerValidate(source As Object, args As ServerValidateEventArgs) Handles csvColor.ServerValidate
+        args.IsValid = False
+        If fulColor.HasFile Then
+            args.IsValid = True
+        Else
+            csvColor.ErrorMessage = "Elija una imagen para este color"
+        End If
     End Sub
 End Class
