@@ -7,7 +7,7 @@ Public Class Usuario
     Public Function login(ByRef usuario As String, ByVal contrasenia As String) As String
         Dim con As New Conexion
         Dim ds As New Data.DataSet
-        Dim query As String = "SELECT * FROM usuario WHERE usuario={0} AND contrasenia = {1}"
+        Dim query As String = "SELECT * FROM cr_Usuarios WHERE Usuario='{0}' AND contra_Usuario = '{1}' AND status_Usuario = 'activo'"
 
         query = String.Format(query, usuario, contrasenia)
         ds = con.retrieve(query)

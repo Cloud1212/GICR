@@ -8,7 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <table style="width:100%;">
+        lo<table style="width:100%;">
             <tr>
                 <td class="auto-style1"></td>
                 <td class="auto-style3">Usuarios</td>
