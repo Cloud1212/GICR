@@ -36,6 +36,7 @@
                         <asp:MenuItem Text="Accesorios" Value="Accesorios" NavigateUrl="~/Accesorios.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Color" Value="Color">
                             <asp:MenuItem NavigateUrl="~/Color.aspx" Text="Alta color" Value="Color"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/BajaColor .aspx" Text="Baja Color" Value="Baja Color"></asp:MenuItem>
                         </asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem NavigateUrl="~/SubeArchivo.aspx" Text="Carga de Archivos" Value="Carga de Archivos"></asp:MenuItem>
