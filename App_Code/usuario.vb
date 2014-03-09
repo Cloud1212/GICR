@@ -4,7 +4,7 @@ Public Class Usuario
     Private id_usuario As Integer
     Private usuario As String
 
-    Public Function login(ByRef usuario As String, ByVal contrasenia As String) As String
+    Public Function login(ByRef usuario As String, ByVal contrasenia As String) As Boolean
         Dim con As New Conexion
         Dim ds As New Data.DataSet
         Dim query As String = "SELECT * FROM cr_Usuarios WHERE Usuario='{0}' AND contra_Usuario = '{1}' AND status_Usuario = 'activo'"
@@ -13,9 +13,9 @@ Public Class Usuario
         ds = con.retrieve(query)
 
         If (ds.Tables(0).Rows.Count > 0) Then
-            Return "Correcto"
+            Return True
         Else
-            Return "Error"
+            Return False
         End If
     End Function
     Private Function insert(ByRef data() As String) As String
