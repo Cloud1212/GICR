@@ -33,31 +33,28 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlModelo" runat="server">
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:DropDownList ID="DropDownList2" runat="server">
+                <asp:DropDownList ID="ddlAno" runat="server">
                     <asp:ListItem>Año</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:DropDownList ID="ddlColor" runat="server">
                     <asp:ListItem>Color</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:DropDownList ID="DropDownList4" runat="server">
-                    <asp:ListItem>Transmision</asp:ListItem>
-                </asp:DropDownList>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>

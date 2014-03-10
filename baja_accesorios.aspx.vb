@@ -13,11 +13,9 @@ Partial Class baja_accesorios
         clave = txtCveAccesorio.Text
         palabra = txtPalabraClave.Text
         If clave.Length < 3 Then
-            Response.Write("<script languaje=javascript> alert('La clave del accesorio debe de contener 3 caracteres');</script>")
+            Response.Write("<script>alert('La clave del accesorio debe de contener 3 caracteres')</script>")
             Response.Redirect(Request.Url.AbsoluteUri)
-        End If
-
-        If clave = "" And palabra = "" Then
+        ElseIf clave = "" And palabra = "" Then
             Response.Write("<script languaje=javascript> alert('Debe de ingresar al menos uno de los 2 campos');</script>")
             Response.Redirect(Request.Url.AbsoluteUri)
         End If
