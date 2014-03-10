@@ -32,6 +32,7 @@ Partial Class BajaColor_
             lblBsca.Visible = False
             txtBuscar.Visible = False
             btnBuscar.Visible = False
+            grdColor.Visible = True
             query = "select cdgo_color,cve_Color,descr_Color from color_auto "
             ds = cl.retrieve(query, CommandType.Text)
             Me.grdColor.DataSource = ds
