@@ -42,32 +42,14 @@ Partial Class ConsultaProd
 
         'End If
 
-
-
-
     End Sub
-    Protected Sub ddlAno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlAno.SelectedIndexChanged
-        Dim cl As New Chevrolet
-        Dim ds As DataSet
-        Dim query As String
 
-
-            query = "select color_auto.descr_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} group by descr_color order by descr_color"
-            query = String.Format(query, ddlModelo.SelectedValue, ddlAno.SelectedValue)
-            ds = cl.retrieve(query, CommandType.Text)
-            ddlColor.DataSource = ds
-            ddlColor.DataValueField = "descr_color"
-            ddlColor.DataTextField = "descr_color"
-            ddlColor.DataBind()
-
-
-    End Sub
     Protected Sub ddlModelo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlModelo.SelectedIndexChanged
 
         Dim cl As New Chevrolet
         Dim ds As DataSet
         Dim query As String
-
+        Dim seleccion As String
 
         query = "select anio_modelo from excel where gpo_asig = '{0}' group by anio_modelo order by anio_modelo"
         query = String.Format(query, ddlModelo.SelectedValue)
@@ -77,6 +59,20 @@ Partial Class ConsultaProd
         ddlAno.DataTextField = "anio_modelo"
         ddlAno.DataBind()
 
-        
     End Sub
+    Protected Sub ddlAno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlAno.SelectedIndexChanged
+        Dim cl As New Chevrolet
+        Dim ds As DataSet
+        Dim query As String
+
+            query = "select color_auto.descr_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} group by descr_color order by descr_color"
+            query = String.Format(query, ddlModelo.SelectedValue, ddlAno.SelectedValue)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlColor.DataSource = ds
+            ddlColor.DataValueField = "descr_color"
+            ddlColor.DataTextField = "descr_color"
+            ddlColor.DataBind()
+
+    End Sub
+
 End Class
