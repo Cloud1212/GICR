@@ -14,13 +14,16 @@ Partial Class baja_accesorios
         palabra = txtPalabraClave.Text
         If clave.Length < 3 Then
             Response.Write("<script languaje=javascript> alert('La clave del accesorio debe de contener 3 caracteres');</script>")
-            GoTo end1
+            Response.Redirect(Request.Url.AbsoluteUri)
         End If
 
         If clave = "" And palabra = "" Then
             Response.Write("<script languaje=javascript> alert('Debe de ingresar al menos uno de los 2 campos');</script>")
-            GoTo end1
-        ElseIf clave.Length > 0 Then
+            Response.Redirect(Request.Url.AbsoluteUri)
+        End If
+
+
+        If clave.Length > 0 Then
             query = "select * from accesorios where cve_accesorio = '{0}'"
             query = String.Format(query, clave)
             ds = cl.retrieve(query, CommandType.Text)
@@ -34,8 +37,7 @@ Partial Class baja_accesorios
             Me.grdbajaAccesorios.DataBind()
         End If
 
-end1:
-        Response.Redirect(Request.Url.AbsoluteUri)
+
 
     End Sub
     Protected Sub btnBuscarTodos_Click(sender As Object, e As EventArgs) Handles btnBuscarTodos.Click
