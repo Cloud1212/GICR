@@ -20,7 +20,7 @@
             height: 37px;
         }
         .auto-style9 {
-            width: 316px;
+            width: 145px;
         }
         .auto-style10 {
             height: 34px;
@@ -47,14 +47,14 @@
                     </tr>
                     <tr>
                         <td class="auto-style7">
-                <asp:DropDownList ID="ddlModelo" runat="server">
+                <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack="True" >
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style7">
-                <asp:DropDownList ID="ddlAno" runat="server">
+                <asp:DropDownList ID="ddlAno" runat="server" AutoPostBack ="true" >
                     <asp:ListItem>Año</asp:ListItem>
                 </asp:DropDownList>
                         </td>
@@ -89,7 +89,25 @@
                 <asp:Image ID="Image2" runat="server" Height="108px" Width="126px" />
                         </td>
                         <td>
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="496px">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <Columns>
+                        <asp:BoundField DataField="gpo_asig" HeaderText="Modelo" />
+                        <asp:BoundField DataField="anio_modelo" HeaderText="Año" />
+                        <asp:BoundField DataField="ord_num" HeaderText="Orden" />
+                        <asp:BoundField DataField="descr_color" HeaderText="Color" />
+                        <asp:BoundField DataField="paquete" HeaderText="Paquete" />
+                    </Columns>
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
                         </td>
                     </tr>
