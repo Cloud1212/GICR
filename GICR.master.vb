@@ -56,19 +56,23 @@ Partial Class GICR
             Select Case reg("perfil_Usuario").ToString
                 Case "supervisor"
                     Menu1.Items.Clear()
+                    Menu1.Items.Add(New MenuItem(text:="INICIO", value:="INICIO", imageUrl:="", navigateUrl:="~/Inicio.aspx"))
                     Menu1.Items.Add(New MenuItem(text:="Reportes", value:="Reportes"))
-                    Menu1.Items(0).ChildItems.Add(New MenuItem(text:="Reporte de antiguedad", value:="Futuros Embarques", imageUrl:="", navigateUrl:="~/RepAnti.aspx"))
+                    Menu1.Items(1).ChildItems.Add(New MenuItem(text:="Reporte de antiguedad", value:="Futuros Embarques", imageUrl:="", navigateUrl:="~/RepAnti.aspx"))
                     Menu1.Items.Add(New MenuItem(text:="Consultas", value:="Consultas"))
-                    Menu1.Items(1).ChildItems.Add(New MenuItem(text:="Consulta de producto", value:="Consulta de producto", imageUrl:="", navigateUrl:="~/ConsultaProd.aspx"))
-                    Menu1.Items(1).ChildItems.Add(New MenuItem(text:="Consulta existencias", value:="Consulta existencias", imageUrl:="", navigateUrl:="~/ConsultaExist.aspx"))
+                    Menu1.Items(2).ChildItems.Add(New MenuItem(text:="Consulta de producto", value:="Consulta de producto", imageUrl:="", navigateUrl:="~/ConsultaProd.aspx"))
+                    Menu1.Items(2).ChildItems.Add(New MenuItem(text:="Consulta existencias", value:="Consulta existencias", imageUrl:="", navigateUrl:="~/ConsultaExist.aspx"))
                 Case "ventas"
                     Menu1.Items.Clear()
+                    Menu1.Items.Add(New MenuItem(text:="INICIO", value:="INICIO", imageUrl:="", navigateUrl:="~/Inicio.aspx"))
+                    Menu1.Items.Add(New MenuItem(text:="Apartados", value:="Apartados"))
                     Menu1.Items.Add(New MenuItem(text:="Reportes", value:="Reportes"))
-                    Menu1.Items(0).ChildItems.Add(New MenuItem(text:="Reporte de antiguedad", value:="Futuros Embarques", imageUrl:="", navigateUrl:="~/RepAnti.aspx"))
+                    Menu1.Items(2).ChildItems.Add(New MenuItem(text:="Reporte de antiguedad", value:="Futuros Embarques", imageUrl:="", navigateUrl:="~/RepAnti.aspx"))
                     Menu1.Items.Add(New MenuItem(text:="Consultas", value:="Consultas"))
-                    Menu1.Items(1).ChildItems.Add(New MenuItem(text:="Consulta de producto", value:="Consulta de producto", imageUrl:="", navigateUrl:="~/ConsultaProd.aspx"))
-                    Menu1.Items(1).ChildItems.Add(New MenuItem(text:="Consulta existencias", value:="Consulta existencias", imageUrl:="", navigateUrl:="~/ConsultaExist.aspx"))
+                    Menu1.Items(3).ChildItems.Add(New MenuItem(text:="Consulta de producto", value:="Consulta de producto", imageUrl:="", navigateUrl:="~/ConsultaProd.aspx"))
+                    Menu1.Items(3).ChildItems.Add(New MenuItem(text:="Consulta existencias", value:="Consulta existencias", imageUrl:="", navigateUrl:="~/ConsultaExist.aspx"))
             End Select
+            If (Menu1.Items(Menu1.Items.Count - 1).Text <> reg("nom_Usuario").ToString.Trim) Then Menu1.Items.Add(New MenuItem(reg("nom_Usuario").ToString.Trim))
         Else
             termina_session()
         End If
