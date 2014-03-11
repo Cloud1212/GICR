@@ -63,5 +63,8 @@
 
         queryInsert &= ";"
         con.retrieve(queryInsert)
+
+        query = "exec actualizar_separados"
+        con.retrieve(query)
     End Function
 End Class
