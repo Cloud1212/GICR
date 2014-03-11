@@ -2,16 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-    .auto-style1 {
-        width: 209px;
-    }
     .auto-style2 {
         width: 319px;
     }
     .auto-style3 {
         width: 229px;
     }
-</style>
+        .auto-style4 {
+            width: 245px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table style="width:100%;">
@@ -31,7 +31,7 @@
                     <asp:ListItem Value="0">Modelo</asp:ListItem>
                 </asp:DropDownList>
             </td>
-            <td class="auto-style1" colspan="2">
+            <td class="auto-style4" colspan="2">
                 <asp:DropDownList ID="ddlRango" runat="server">
                     <asp:ListItem Value="0">Rango</asp:ListItem>
                     <asp:ListItem Value="1">Todos</asp:ListItem>
@@ -47,8 +47,20 @@
         </tr>
         <tr>
             <td colspan="2">
+                &nbsp;</td>
+            <td colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
                 <center><asp:Button ID="btnGenera" runat="server"  Text="Genera reporte" /></center>
             </td>
+            <td colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                &nbsp;</td>
             <td colspan="2">
                 &nbsp;</td>
         </tr>
