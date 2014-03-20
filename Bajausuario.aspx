@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="Bajausuario.aspx.vb" Inherits="Bajausuario" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="Bajausuario.aspx.vb" Inherits="Bajausuario" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -13,6 +13,9 @@
             <td>Busca usuario:</td>
             <td>
                 <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Permite buscar a un usario que comienze con el texto del cuado"
+                    data-original-title="Busca Usuario"></asp:HyperLink>
                 <asp:Button ID="btnUsuario" runat="server" Text="Buscar usuario" />
             </td>
             <td>&nbsp;</td>

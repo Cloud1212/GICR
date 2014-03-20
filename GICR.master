@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server" class ="container" >
     <title></title>
+    <meta charset="utf-8" />  
     <link href="App_Themes/css/bootstrap.css" rel="stylesheet" />
     
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -13,7 +14,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div >
+    <div>
        
         <p>
                 <asp:Image ID="Image1" runat="server" Height="44px" ImageUrl="~/Imagenes/logo.png" Width="92px" />
@@ -65,5 +66,8 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+    <script src="./js/jquery-2.1.0.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/helper.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaExist.aspx.vb" Inherits="ConsultaExist" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaExist.aspx.vb" Inherits="ConsultaExist" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -47,6 +47,9 @@
                           <asp:ListItem Value="1">Todos</asp:ListItem>
                           <asp:ListItem Value="2">Modelo</asp:ListItem>
                       </asp:DropDownList>
+                      <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                            data-content="<table class='table'><tr><th>Todos</th><td>Muestra todos los registros del vehiculo</td></tr><tr><th>Modelo</th><td>Habilita la busqueda por el modelo</td></tr></table>"
+                            data-original-title="Tipo de consulta"></asp:HyperLink>
                   </td>
                   <td>&nbsp;</td>
               </tr>
@@ -56,6 +59,9 @@
                       <asp:DropDownList ID="ddlModelo" runat="server"  
                              Visible ="false" >
                       </asp:DropDownList>
+                      <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                          data-content="Escoje un modelo de carro al que se desea ver la información"
+                          data-original-title="Modelo" Visible="false"></asp:HyperLink>
                   </td>
                   <td class="auto-style7">&nbsp;</td>
                   <td>&nbsp;</td>

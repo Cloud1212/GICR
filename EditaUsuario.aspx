@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="EditaUsuario.aspx.vb" Inherits="EditaUsuario" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="EditaUsuario.aspx.vb" Inherits="EditaUsuario" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -20,6 +20,9 @@
             <td>Busca usuario:</td>
             <td>
                 <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Busca un usuario que contenga el texto escrito en este recuadro"
+                    data-original-title="Busca Usuario"></asp:HyperLink>
                 <asp:Button ID="btnUsuario" runat="server" Text="Busca usuario" />
                 <asp:RequiredFieldValidator ID="rfvBusca" ControlToValidate ="txtUsuario" runat="server" ErrorMessage="Debe teclear un usuario">*</asp:RequiredFieldValidator>
             </td>

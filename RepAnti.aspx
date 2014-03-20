@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="RepAnti.aspx.vb" Inherits="RepAnti" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="RepAnti.aspx.vb" Inherits="RepAnti" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -30,6 +30,9 @@
                 <asp:DropDownList ID="ddlModelos" runat="server" AppendDataBoundItems ="true"  >
                     <asp:ListItem Value="0">Modelo</asp:ListItem>
                 </asp:DropDownList>
+                <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Este permite ver las clases de modelos a los que le podemos ver una antiguedad en piso"
+                    data-original-title="Modelo"></asp:HyperLink>
             </td>
             <td class="auto-style4" colspan="2">
                 <asp:DropDownList ID="ddlRango" runat="server">
@@ -40,6 +43,9 @@
                     <asp:ListItem Value="4">Mayor a 59 y menor a 90 días</asp:ListItem>
                     <asp:ListItem Value="5">Mayor de 90 días</asp:ListItem>
                 </asp:DropDownList>
+                <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Este ofrece la opcion de ver todos o diferentes rangos de fechas ya establecidas"
+                    data-original-title="Rango de fecha"></asp:HyperLink>
                 <asp:CustomValidator ID="CustomValidator1" ControlToValidate ="ddlRango" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
             </td>
             <td class="auto-style3">

@@ -8,7 +8,7 @@ Public Class Chevrolet
     Private Function GetConnection() As SqlConnection
 
         Try
-            Dim conexion As New SqlConnection("Server=CLOUD-PC;Database=GICR;Trusted_Connection=True;")
+            Dim conexion As New SqlConnection("Data Source=EMMANUEL-PC;Initial Catalog=Proyecto;Integrated Security=True")
 
             GetConnection = conexion
 

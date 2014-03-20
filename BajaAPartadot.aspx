@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="BajaAPartadot.aspx.vb" Inherits="BajaAPartadot" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="BajaAPartadot.aspx.vb" Inherits="BajaAPartadot" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -21,6 +21,7 @@
             <td class="modal-sm" style="width: 263px">
                 <asp:TextBox ID="txtFolio" runat="server" Width="175px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvFolio" ControlToValidate ="txtFolio" runat="server" ErrorMessage="Capture un folio o nombre de usuario">*</asp:RequiredFieldValidator>
+                <asp:HyperLink ID="help1" runat="server" data-content="Folio que representa un Apartado" data-original-title="Folio" NavigateUrl="#" SkinID="helper" title=""></asp:HyperLink>
             </td>
             <td>
                 <asp:Button ID="btnCancela" runat="server" Text="Cancelar" />

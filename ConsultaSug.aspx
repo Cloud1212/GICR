@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaSug.aspx.vb" Inherits="ConsultaSug" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaSug.aspx.vb" Inherits="ConsultaSug" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -24,6 +24,9 @@
                 <asp:DropDownList ID="DropDownList5" runat="server">
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
+                <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Modelo que se desa hacer la consulta"
+                    data-original-title="Modelo"></asp:HyperLink>
             </td>
             <td class="auto-style1">
                 <asp:Button ID="btnConsulta" runat="server" Text="Consultar" style="margin-left: 0px" />

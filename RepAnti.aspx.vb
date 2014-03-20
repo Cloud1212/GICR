@@ -35,7 +35,7 @@ Partial Class RepAnti
 
             Dim cl As New Chevrolet
             Dim ds As DataSet
-            Dim query As String
+            Dim query As String = ""
             Dim index As Integer
             Dim modelo As String
 
@@ -54,8 +54,8 @@ Partial Class RepAnti
                     query = String.Format("select * from excel where gpo_asig='{0}' and antiguedad_inventario>60 and antiguedad_inventario<=90", modelo)
                 Case 5
                     query = String.Format("select * from excel where gpo_asig='{0}' and antiguedad_inventario>90 ", modelo)
-
             End Select
+
             ds = cl.retrieve(query, CommandType.Text)
             Me.GridView1.DataSource = ds
             Me.GridView1.DataBind()

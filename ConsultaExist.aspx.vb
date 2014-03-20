@@ -70,6 +70,7 @@ Partial Class ConsultaExist
     Protected Sub DropDownList1_TextChanged(sender As Object, e As EventArgs) Handles DropDownList1.TextChanged
         If DropDownList1.SelectedValue = 1 Then
             GridView1.Visible = True
+            help2.Visible = False
             ddlModelo.Visible = False
 
             Dim cl As New Chevrolet
@@ -82,6 +83,7 @@ Partial Class ConsultaExist
             GridView1.DataBind()
         ElseIf DropDownList1.SelectedValue = 2 Then
             ddlModelo.Visible = True
+            help2.Visible = True
             GridView1.Visible = False
             cargaModelo()
         End If

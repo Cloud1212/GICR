@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="BajaColor .aspx.vb" Inherits="BajaColor_" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="BajaColor .aspx.vb" Inherits="BajaColor_" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -28,6 +28,9 @@
             </asp:DropDownList>
         </td>
         <td>
+            <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="<table class='table'><tr><th>Todos</th><td>Muestra todos los registros de Color</td></tr><tr><th>Descripción</th><td>Habilita la busqueda por la descripción</td></tr><tr><th>Tipo Clave</th><td>Habilita la busqueda por el tipo de clave</td></tr></table>"
+                    data-original-title="Tipo de Busqueda"></asp:HyperLink>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="175px" />
         </td>
     </tr>
@@ -38,9 +41,13 @@
         <td class="auto-style3">
             <asp:TextBox ID="txtBuscar" runat="server" Visible ="false"  Width="147px" MaxLength="50"></asp:TextBox>
             <asp:Button ID="btnBuscar" runat="server" Visible ="false"   Text="Buscar" />
+        </td>
+        <td>
+             <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Busca en los registro lo que empieza por los que se le indica en este recuadro"
+                    data-original-title="Busca" Visible="false"></asp:HyperLink>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate ="txtBuscar" ErrorMessage="Capture una descripcion o clave">*</asp:RequiredFieldValidator>
         </td>
-        <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style2">

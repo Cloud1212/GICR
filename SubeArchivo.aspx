@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="SubeArchivo.aspx.vb" Inherits="SubeArchivo" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="SubeArchivo.aspx.vb" Inherits="SubeArchivo" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -43,6 +43,9 @@
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="help" runat="server" SkinID="helper" NavigateUrl="#" title=""
+            data-content="Este espacio es para la carga de un archivo excel .xlsx y este es la nos sirve como base para empezar los registros"
+            data-original-title="Cargar Archivo"></asp:HyperLink>
         <asp:FileUpload ID="fuArchivo" runat="server" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" />
         <br />
         <br />

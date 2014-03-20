@@ -11,14 +11,24 @@ Partial Class logon
         ds = con.retrieve(query)
 
         If (ds.Tables(0).Rows.Count > 0) Then
-            Session("Activo_GICR") = ds.Tables(0).Rows(0)("cdgo_Usuarios").ToString
-            Session("GICR") = ds.Tables(0).Rows(0)
-            Session.Timeout = 30
-            Response.Redirect("~/Inicio.aspx")
+            With ds.Tables(0).Rows(0)
+                If .Item("Usuario") = txt_usuario.Text And .Item("contra_Usuario") = txt_contraenia.Text Then
+                    Session("Activo_GICR") = .Item("cdgo_Usuarios").ToString
+                    Session("GICR") = ds.Tables(0).Rows(0)
+                    Session.Timeout = 30
+                    Response.Redirect("~/Inicio.aspx")
+                Else
+                    error_login()
+                End If
+            End With
         Else
-            'Cordigo de Error
+            error_login()
         End If
         txt_contraenia.Text = ""
         txt_usuario.Text = ""
+    End Sub
+
+    Private Sub error_login()
+        Response.Write("<script>alert('Error al ingreso de la sesion')</script>")
     End Sub
 End Class

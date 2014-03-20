@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaProd.aspx.vb" Inherits="ConsultaProd" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="ConsultaProd.aspx.vb" Inherits="ConsultaProd" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -50,6 +50,9 @@
                 <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack="True" AppendDataBoundItems ="true"  >
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
+                            <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                                data-content="Modelo del vehico a consultar"
+                                data-original-title="Modelo"></asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
@@ -57,6 +60,9 @@
                 <asp:DropDownList ID="ddlAno" runat="server" AutoPostBack ="true"   >
                     <asp:ListItem>Año</asp:ListItem>
                 </asp:DropDownList>
+                            <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                                data-content="Año defel auto a buscar"
+                                data-original-title="Año"></asp:HyperLink>
                         </td>
 
                     </tr>
@@ -65,6 +71,9 @@
                 <asp:DropDownList ID="ddlColor" runat="server"  >
                     <asp:ListItem>Color</asp:ListItem>
                 </asp:DropDownList>
+                            <asp:HyperLink ID="help3" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                                data-content="Selecciona un color del vehiculo que quieres consultar"
+                                data-original-title="Color"></asp:HyperLink>
                             </td>
 
                     </tr>

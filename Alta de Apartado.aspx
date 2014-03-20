@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="Alta de Apartado.aspx.vb" Inherits="Alta_de_Apartado" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/GICR.master" AutoEventWireup="false" CodeFile="Alta de Apartado.aspx.vb" Inherits="Alta_de_Apartado" Theme="SkinFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -37,7 +37,10 @@
                 <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate ="txtNombre" ErrorMessage="Capture el nombre del cliente">*</asp:RequiredFieldValidator>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Nombre del cliente a separa un vehiculo"
+                    data-original-title="Nombre"></asp:HyperLink>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
@@ -48,7 +51,10 @@
                 <asp:CustomValidator ID="csvTelefono" ControlToValidate ="txtTelefono" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Telefono de contacto con el cliente"
+                    data-original-title="Telefono"></asp:HyperLink>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
@@ -59,7 +65,10 @@
                 <asp:RegularExpressionValidator ID="revMail" ControlToValidate ="txtMail" runat="server" ErrorMessage="EL formato de correo no es valido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:HyperLink ID="help3" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Correo electronico para aviso WEB del cliente"
+                    data-original-title="E-mail"></asp:HyperLink>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">Persona que lo atiende:</td>
@@ -78,7 +87,10 @@
                 </asp:DropDownList>
             </td>
             <td>
-                &nbsp;</td>
+                <asp:HyperLink ID="help4" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Vendedor a quien se le va a atribuir la el apartado"
+                    data-original-title="Vendedor"></asp:HyperLink>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">
@@ -102,7 +114,12 @@
     </table>
     <table style="width: 100%;">
         <tr>
-            <td class="auto-style5">Apartado:</td>
+            <td class="auto-style5">
+                Apartado:
+                <asp:HyperLink ID="help5" runat="server" SkinID="helper" NavigateUrl="#" title="" 
+                    data-content="Selecciona las opciones correspondientes para el filtrado del vehiculo"
+                    data-original-title="Apartado"></asp:HyperLink>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

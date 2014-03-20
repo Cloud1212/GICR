@@ -32,6 +32,7 @@ Partial Class BajaColor_
             lblBsca.Visible = False
             txtBuscar.Visible = False
             btnBuscar.Visible = False
+            help2.Visible = False
             grdColor.Visible = True
             query = "select cdgo_color,cve_Color,descr_Color from color_auto "
             ds = cl.retrieve(query, CommandType.Text)
@@ -41,6 +42,7 @@ Partial Class BajaColor_
             txtBuscar.Visible = True
             btnBuscar.Visible = True
             lblBsca.Visible = True
+            help2.Visible = True
             grdColor.Visible = False
             If ddlBusqueda.SelectedValue = 2 Then
                 lblBsca.Text = "Ingrese la descripcion de color a buscar:"
@@ -55,7 +57,7 @@ Partial Class BajaColor_
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim cl As New Chevrolet
         Dim ds As DataSet
-        Dim query As String
+        Dim query As String = ""
         If ddlBusqueda.SelectedValue = 2 Then
             grdColor.Visible = True
             query = "select cdgo_color,cve_Color,descr_Color from color_auto where descr_Color like '{0}'+'%' "
