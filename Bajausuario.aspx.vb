@@ -33,11 +33,13 @@ Partial Class Bajausuario
         If txtUsuario.Text = "" Then
             query = "select cdgo_Usuarios,Usuario,nom_Usuario,correo_Usuario,perfil_Usuario,status_Usuario from cr_Usuarios "
         Else
-            query = "select  cdgo_Usuarios,Usuario,nom_Usuario,correo_Usuario,perfil_Usuario,status_Usuario from cr_Usuarios where Usuario='{0}'"
+            query = "select  cdgo_Usuarios,Usuario,nom_Usuario,correo_Usuario,perfil_Usuario,status_Usuario from cr_Usuarios where Usuario like'{0}' + '%'"
             query = String.Format(query, txtUsuario.Text)
         End If
         ds = cl.retrieve(query, CommandType.Text)
         Me.grdUsuario.DataSource = ds
         Me.grdUsuario.DataBind()
     End Sub
+
+   
 End Class

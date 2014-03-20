@@ -110,27 +110,27 @@
         </tr>
         <tr>
             <td class="auto-style5">
-                <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack ="true" AppendDataBoundItems ="true" >
                     <asp:ListItem Value="0">Seleccione un modelo</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:DropDownList ID="ddlAnio" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlAnio" runat="server" AutoPostBack ="true"  >
                     <asp:ListItem Value="0">Elije año</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:DropDownList ID="ddlColor" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlColor" runat="server" AutoPostBack ="true"   >
                     <asp:ListItem Value="0">Seleccione color</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:DropDownList ID="ddlPaquete" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlPaquete" runat="server" AutoPostBack ="true"  >
                     <asp:ListItem Value="0">Seleccione paquete</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:DropDownList ID="ddlOrden" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlOrden" runat="server" AutoPostBack ="true"   >
                     <asp:ListItem Value="0">Seleccione orden</asp:ListItem>
                 </asp:DropDownList>
             </td>

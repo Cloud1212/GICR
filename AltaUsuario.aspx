@@ -8,7 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        lo<table style="width:100%;">
+        <table style="width:100%;">
             <tr>
                 <td class="auto-style1"></td>
                 <td class="auto-style3">Usuarios</td>
@@ -79,7 +79,7 @@
             <tr>
                 <td>Perfil</td>
                 <td class="auto-style5">
-                    <asp:DropDownList ID="ddlPerfil" runat="server">
+                    <asp:DropDownList ID="ddlPerfil" runat="server" AppendDataBoundItems ="true" >
                         <asp:ListItem Value="Elija perfil">Elija perfil</asp:ListItem>
                         <asp:ListItem>prueba</asp:ListItem>
                     </asp:DropDownList>

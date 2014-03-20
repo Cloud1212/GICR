@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td class="auto-style2">
-                <asp:DropDownList ID="ddlModelos" runat="server" >
+                <asp:DropDownList ID="ddlModelos" runat="server" AppendDataBoundItems ="true"  >
                     <asp:ListItem Value="0">Modelo</asp:ListItem>
                 </asp:DropDownList>
             </td>

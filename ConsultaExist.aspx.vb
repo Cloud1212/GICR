@@ -84,10 +84,6 @@ Partial Class ConsultaExist
             ddlModelo.Visible = True
             GridView1.Visible = False
             cargaModelo()
-            Modelo()
-
-
-
         End If
     End Sub
     Public Sub Modelo()

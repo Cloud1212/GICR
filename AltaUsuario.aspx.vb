@@ -116,4 +116,21 @@ Partial Class AltaUsuario
         Me.txtUsuario.Focus()
     End Sub
 
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If IsPostBack Then
+        Else
+
+
+            Dim cl As New Chevrolet
+            Dim ds As DataSet
+            Dim query As String
+
+            query = "select idPerfil from perfiles "
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlPerfil.DataSource = ds
+            ddlPerfil.DataValueField = "idPerfil"
+            ddlPerfil.DataTextField = "idPerfil"
+            ddlPerfil.DataBind()
+        End If
+    End Sub
 End Class

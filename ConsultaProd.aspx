@@ -47,14 +47,14 @@
                     </tr>
                     <tr>
                         <td class="auto-style7">
-                <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack="True" >
+                <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack="True" AppendDataBoundItems ="true"  >
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style7">
-                <asp:DropDownList ID="ddlAno" runat="server" AutoPostBack ="true" >
+                <asp:DropDownList ID="ddlAno" runat="server" AutoPostBack ="true"   >
                     <asp:ListItem>Año</asp:ListItem>
                 </asp:DropDownList>
                         </td>
@@ -62,7 +62,7 @@
                     </tr>
                         <tr>
                         <td class="auto-style7">
-                <asp:DropDownList ID="ddlColor" runat="server">
+                <asp:DropDownList ID="ddlColor" runat="server"  >
                     <asp:ListItem>Color</asp:ListItem>
                 </asp:DropDownList>
                             </td>
