@@ -29,7 +29,7 @@
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style1">Clave de Accesorio</td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtClave" runat="server" Width="113px"></asp:TextBox>
+                <asp:TextBox ID="txtClave" runat="server" Width="113px" MaxLength="3"></asp:TextBox>
             </td>
             <td>
                 <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
@@ -43,7 +43,7 @@
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style1">Descripcion de accesorio</td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtDesc" runat="server" Width="184px"></asp:TextBox>
+                <asp:TextBox ID="txtDesc" runat="server" Width="184px" MaxLength="200"></asp:TextBox>
             </td>
             <td>
                 <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
