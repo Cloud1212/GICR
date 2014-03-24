@@ -27,7 +27,7 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate ="txtUsuario" runat="server" ErrorMessage="Elija un nombre de usuario">*</asp:RequiredFieldValidator>
                     <asp:CustomValidator ID="CustomValidator1" ControlToValidate ="txtUsuario" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
                     <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Representa el usuario con el que entraras al sitema este debe ser unico"
+                        data-content="Representa el usuario con el que entraras al sitema, este debe ser unico"
                         data-original-title="Usuario"></asp:HyperLink>
                 </td>
                 <td class="auto-style2">
@@ -54,7 +54,7 @@
                     <asp:RequiredFieldValidator ID="rfvContra" ControlToValidate ="txtContra" runat="server" ErrorMessage="Debe capturar una contraseña">*</asp:RequiredFieldValidator>
                     <asp:CustomValidator ID="cvContra" ControlToValidate ="txtContra" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
                     <asp:HyperLink ID="help3" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Contraseña de ingreso de sesion"
+                        data-content="Contraseña de ingreso de sesión"
                         data-original-title="Contraseña"></asp:HyperLink>
                 </td>
                 <td>
@@ -67,7 +67,7 @@
                     <asp:RequiredFieldValidator ID="rfvCContra" ControlToValidate ="txtCContra" runat="server" ErrorMessage="Confirme su contraseña">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="cvCContra" ControlToCompare="txtContra" ControlToValidate="txtCContra" runat="server" ErrorMessage="Contraseñas diferentes, verifique sus contraseñas">*</asp:CompareValidator>
                     <asp:HyperLink ID="help4" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Confirma que escribiste la bien contraseña, NO copies y peges"
+                        data-content="Confirma que escribiste la bien contraseña, NO copies y pegues"
                         data-original-title="Confimar Contraseña"></asp:HyperLink>
                 </td>
                 <td>
@@ -80,7 +80,7 @@
                     <asp:RequiredFieldValidator ID="rfvCorreo" ControlToValidate="txtCorreo" runat="server" ErrorMessage="Por favor ingrese un correo">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="revCorreo" ControlToValidate="txtCorreo" runat="server" ErrorMessage="Debe ser formato de correo valido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                     <asp:HyperLink ID="help5" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Escribe el correo electronico donse se te puede avisar de algun cambio"
+                        data-content="Escribe el correo electronico donde se te puede avisar de algun cambio"
                         data-original-title="Correo electronico"></asp:HyperLink>
                 </td>
                 <td>
@@ -93,7 +93,7 @@
                     <asp:RequiredFieldValidator ID="rfvCCorreo" ControlToValidate="txtCCorreo" runat="server" ErrorMessage="Favor de confirmar el correo">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="cvCCorreo" runat="server" ControlToValidate="txtCCorreo" ControlToCompare="txtCorreo" ErrorMessage="Las direcciones de correo deben ser iguales">*</asp:CompareValidator>
                     <asp:HyperLink ID="help6" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Confirma que escribiste la bien el correo electronico, NO copies y peges"
+                        data-content="Confirma que escribiste bien el correo electronico, NO copies y pegues"
                         data-original-title="Confimacion de correo"></asp:HyperLink>
                 </td>
                 <td>
@@ -108,7 +108,7 @@
                     </asp:DropDownList>
                     <asp:CustomValidator ID="cvPerfil" runat="server" ControlToValidate="ddlPerfil" ErrorMessage="Elija una opcion de perfil">*</asp:CustomValidator>
                     <asp:HyperLink ID="help7" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                        data-content="Cada perfil esta de diseñado para ver siertas paginas y relizar algunos roles."
+                        data-content="Cada perfil esta de diseñado para ver ciertas paginas y relizar algunos roles."
                         data-original-title="Perfil"></asp:HyperLink>
                 </td>
                 <td>
