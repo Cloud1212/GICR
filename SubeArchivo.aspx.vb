@@ -28,7 +28,9 @@
 
         con._ruta = ruta
 
-        Dim query As String = "SELECT * FROM [Ordenfir$]"
+        Dim query As String = "exec vaciaExcel"
+
+        query = "SELECT * FROM [Ordenfir$]"
         Dim ds As New Data.DataSet
 
         ds = con.retrieve(query, fileExcel:="Chevrolet")
@@ -56,7 +58,7 @@
                 queryIns &= ", '" & text & "'"
                 If Not reg.ToString.Trim = String.Empty Then vacio = False
             Next
-            queryIns &= ")"
+            queryIns &= ", '')"
             coma_values = ","
             If Not vacio Then queryInsert &= queryIns
         Next
