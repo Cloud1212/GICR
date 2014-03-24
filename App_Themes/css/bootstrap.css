@@ -304,6 +304,9 @@ figure {
 }
 img {
   vertical-align: middle;
+    height: 536px;
+    width: 974px;
+    margin-left: 0px;
 }
 .img-responsive,
 .thumbnail > img,
@@ -5773,4 +5776,16 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.carousel-inner img {
+    border-radius: 50px;
+}
+
+.carousel-control.right {
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(20, 0, 255, 0.5) 100%) !important;
+}
+
+.carousel-control.left{
+    background-image:linear-gradient(to left, rgba(0, 0, 0, 0.0001) 0%, rgba(20, 0, 255, 0.5) 100%) !important;
 }

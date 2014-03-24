@@ -30,7 +30,7 @@ Public Class Conexion
     Private Function getConnection() As SqlConnection
         Dim con As New SqlConnection
         Try
-            con.ConnectionString = ConfigurationManager.ConnectionStrings("GICRConnectionString1").ToString()
+            con.ConnectionString = "Data Source=CLOUD-PC;Initial Catalog=GICR;Integrated Security=True"
             Return con
         Catch ex As Exception
             Throw ex
