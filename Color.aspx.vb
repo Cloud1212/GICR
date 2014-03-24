@@ -14,7 +14,7 @@ Partial Class Color
             Dim query As String
             Dim func As New Ayudante
 
-            query = "insert into color_auto values ('{0}','{1}',''); UPDATE color_auto SET foto_color = CONCAT(cdgo_color,'{2}') WHERE cdgo_color=IDENT_CURRENT('color_auto'); SELECT IDENT_CURRENT('color_auto') AS 'Identity'"
+            query = "insert into color_auto values ('{0}','{1}',''); UPDATE color_auto SET foto_color = (convert(varchar(5),cdgo_color) + '{2}') WHERE cdgo_color=IDENT_CURRENT('color_auto'); SELECT IDENT_CURRENT('color_auto') AS 'Identity'"
             query = String.Format(query, txtColor.Text, txtDesc.Text, func.extraeExtencion(fulColor.FileName))
 
             ds = cl.retrieve(query, CommandType.Text)
