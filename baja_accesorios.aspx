@@ -18,7 +18,7 @@
             </td>
             <td class="auto-style2">
                 <asp:TextBox ID="txtCveAccesorio" runat="server" Width="180px" MaxLength="3"></asp:TextBox>
-                <asp:HyperLink ID="help1" runat="server" data-content="Ingresa la clave de algun accesorio que desar ver" data-original-title="Cave Accesorio" NavigateUrl="#" SkinID="helper" title=""></asp:HyperLink>
+                <asp:HyperLink ID="help1" runat="server" data-content="Ingresa la clave de algún accesorio que desea ver" data-original-title="Cave Accesorio" NavigateUrl="#" SkinID="helper" title=""></asp:HyperLink>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -29,7 +29,7 @@
             <td class="auto-style2">
                 <asp:TextBox ID="txtPalabraClave" runat="server" Width="180px" MaxLength="200"></asp:TextBox>
                 <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                    data-content="Busca la palabra clave"
+                    data-content="Busca por medio de alguna palabra clave"
                     data-original-title="Palabra clave"></asp:HyperLink>
             </td>
             <td>&nbsp;</td>

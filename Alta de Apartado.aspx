@@ -88,7 +88,7 @@
             </td>
             <td>
                 <asp:HyperLink ID="help4" runat="server" SkinID="helper" NavigateUrl="#" title="" 
-                    data-content="Vendedor a quien se le va a atribuir la el apartado"
+                    data-content="Vendedor a quien se le va a atribuir el apartado"
                     data-original-title="Vendedor"></asp:HyperLink>
             </td>
         </tr>
