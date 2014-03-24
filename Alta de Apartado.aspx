@@ -153,7 +153,9 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:CustomValidator ID="CustomValidator1" ControlToValidate ="ddlModelo" runat="server" ErrorMessage="Elija un modelo de vehiculo">*</asp:CustomValidator>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

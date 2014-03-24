@@ -70,62 +70,67 @@ Partial Class Alta_de_Apartado
         Dim cl As New Chevrolet
         Dim ds As DataSet
         Dim query As String
-
-        query = "select anio_modelo from excel where gpo_asig = '{0}' and nombre_cliente='' group by anio_modelo order by anio_modelo"
-        query = String.Format(query, ddlModelo.SelectedValue)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlAnio.DataSource = ds
-        ddlAnio.DataValueField = "anio_modelo"
-        ddlAnio.DataTextField = "anio_modelo"
-        ddlAnio.DataBind()
-        query = "select color_auto.descr_color,color_auto.cve_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} and nombre_cliente='' group by descr_color,cve_color order by descr_color"
-        query = String.Format(query, ddlModelo.SelectedValue, ddlAnio.SelectedValue)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlColor.DataSource = ds
-        ddlColor.DataValueField = "cve_color"
-        ddlColor.DataTextField = "descr_color"
-        ddlColor.DataBind()
-        query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlPaquete.DataSource = ds
-        ddlPaquete.DataValueField = "paquete"
-        ddlPaquete.DataTextField = "paquete"
-        ddlPaquete.DataBind()
-        query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlOrden.DataSource = ds
-        ddlOrden.DataValueField = "ord_num"
-        ddlOrden.DataTextField = "ord_num"
-        ddlOrden.DataBind()
+        If ddlModelo.SelectedIndex <> 0 Then
 
 
+            query = "select anio_modelo from excel where gpo_asig = '{0}' and nombre_cliente='' group by anio_modelo order by anio_modelo"
+            query = String.Format(query, ddlModelo.SelectedValue)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlAnio.DataSource = ds
+            ddlAnio.DataValueField = "anio_modelo"
+            ddlAnio.DataTextField = "anio_modelo"
+            ddlAnio.DataBind()
+            query = "select color_auto.descr_color,color_auto.cve_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} and nombre_cliente='' group by descr_color,cve_color order by descr_color"
+            query = String.Format(query, ddlModelo.SelectedValue, ddlAnio.SelectedValue)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlColor.DataSource = ds
+            ddlColor.DataValueField = "cve_color"
+            ddlColor.DataTextField = "descr_color"
+            ddlColor.DataBind()
+            query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlPaquete.DataSource = ds
+            ddlPaquete.DataValueField = "paquete"
+            ddlPaquete.DataTextField = "paquete"
+            ddlPaquete.DataBind()
+            query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlOrden.DataSource = ds
+            ddlOrden.DataValueField = "ord_num"
+            ddlOrden.DataTextField = "ord_num"
+            ddlOrden.DataBind()
+
+        End If
     End Sub
 
     Protected Sub ddlAnio_TextChanged(sender As Object, e As EventArgs) Handles ddlAnio.TextChanged
         Dim cl As New Chevrolet
         Dim ds As DataSet
         Dim query As String
+        If ddlModelo.SelectedIndex <> 0 Then
 
-        query = "select color_auto.descr_color,color_auto.cve_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} and nombre_cliente='' group by descr_color,cve_color order by descr_color"
-        query = String.Format(query, ddlModelo.SelectedValue, ddlAnio.SelectedValue)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlColor.DataSource = ds
-        ddlColor.DataValueField = "cve_color"
-        ddlColor.DataTextField = "descr_color"
-        ddlColor.DataBind()
-        query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlPaquete.DataSource = ds
-        ddlPaquete.DataValueField = "paquete"
-        ddlPaquete.DataTextField = "paquete"
-        ddlPaquete.DataBind()
-        query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlOrden.DataSource = ds
-        ddlOrden.DataValueField = "ord_num"
-        ddlOrden.DataTextField = "ord_num"
-        ddlOrden.DataBind()
 
+
+            query = "select color_auto.descr_color,color_auto.cve_color from color_auto inner join excel on color_auto.cve_color = excel.clave_2 where excel.gpo_asig = '{0}' and excel.anio_modelo = {1} and nombre_cliente='' group by descr_color,cve_color order by descr_color"
+            query = String.Format(query, ddlModelo.SelectedValue, ddlAnio.SelectedValue)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlColor.DataSource = ds
+            ddlColor.DataValueField = "cve_color"
+            ddlColor.DataTextField = "descr_color"
+            ddlColor.DataBind()
+            query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlPaquete.DataSource = ds
+            ddlPaquete.DataValueField = "paquete"
+            ddlPaquete.DataTextField = "paquete"
+            ddlPaquete.DataBind()
+            query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlOrden.DataSource = ds
+            ddlOrden.DataValueField = "ord_num"
+            ddlOrden.DataTextField = "ord_num"
+            ddlOrden.DataBind()
+        End If
     End Sub
 
     Protected Sub ddlColor_TextChanged(sender As Object, e As EventArgs) Handles ddlColor.TextChanged
@@ -133,79 +138,92 @@ Partial Class Alta_de_Apartado
         Dim ds As DataSet
         Dim query As String
 
-        query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlPaquete.DataSource = ds
-        ddlPaquete.DataValueField = "paquete"
-        ddlPaquete.DataTextField = "paquete"
-        ddlPaquete.DataBind()
-        query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlOrden.DataSource = ds
-        ddlOrden.DataValueField = "ord_num"
-        ddlOrden.DataTextField = "ord_num"
-        ddlOrden.DataBind()
+        If ddlModelo.SelectedIndex <> 0 Then
 
+
+            query = String.Format("select paquete from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo ='{2}'and nombre_cliente='' group by paquete order by paquete", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlPaquete.DataSource = ds
+            ddlPaquete.DataValueField = "paquete"
+            ddlPaquete.DataTextField = "paquete"
+            ddlPaquete.DataBind()
+            query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlOrden.DataSource = ds
+            ddlOrden.DataValueField = "ord_num"
+            ddlOrden.DataTextField = "ord_num"
+            ddlOrden.DataBind()
+        End If
     End Sub
 
     Protected Sub ddlPaquete_TextChanged(sender As Object, e As EventArgs) Handles ddlPaquete.TextChanged
         Dim cl As New Chevrolet
         Dim ds As DataSet
         Dim query As String
-        query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        ddlOrden.DataSource = ds
-        ddlOrden.DataValueField = "ord_num"
-        ddlOrden.DataTextField = "ord_num"
-        ddlOrden.DataBind()
+        If ddlModelo.SelectedIndex <> 0 Then
 
+
+            query = String.Format("select ord_num from excel where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by ord_num order by ord_num", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            ddlOrden.DataSource = ds
+            ddlOrden.DataValueField = "ord_num"
+            ddlOrden.DataTextField = "ord_num"
+            ddlOrden.DataBind()
+        End If
 
     End Sub
 
     Protected Sub btnPrevia_Click(sender As Object, e As EventArgs) Handles btnPrevia.Click
-        grdVista.Visible = True
-        Dim cl As New Chevrolet
-        Dim ds As DataSet
-        Dim query As String
+        If Page.IsValid Then
 
-        query = String.Format("select gpo_asig ,anio_modelo ,descr_color,paquete ,ord_num  from excel a join color_auto b on a.clave_2 =b.cve_color  where gpo_asig ='{0}'and anio_modelo ='{1}' and cve_color ='{2}' and paquete ='{3}' and ord_num='{4}'", ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        grdVista.DataSource = ds
-        grdVista.DataBind()
+
+            grdVista.Visible = True
+            Dim cl As New Chevrolet
+            Dim ds As DataSet
+            Dim query As String
+
+            query = String.Format("select gpo_asig ,anio_modelo ,descr_color,paquete ,ord_num  from excel a join color_auto b on a.clave_2 =b.cve_color  where gpo_asig ='{0}'and anio_modelo ='{1}' and cve_color ='{2}' and paquete ='{3}' and ord_num='{4}'", ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            grdVista.DataSource = ds
+            grdVista.DataBind()
+        End If
     End Sub
 
     Protected Sub btnAparta_Click(sender As Object, e As EventArgs) Handles btnAparta.Click
-        Dim cl As New Chevrolet
-        Dim ds As DataSet
-        Dim query As String
-        Dim folio As String
-
-        query = String.Format("insert into folioApartados values(substring(convert(char,GETDATE(),100),1,1)+substring(convert(char,GETDATE(),100),5,2)+substring(convert(char,GETDATE(),100),10,2),'{0}')", ddlOrden.Text)
-        cl.retrieve(query, CommandType.Text)
-        query = String.Format("declare @id varchar(10) set @id =(select apartado + convert(char,id) from folioApartados where orden='{0}') insert into apartados values (@id,'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','') ", ddlOrden.Text, txtNombre.Text, txtTelefono.Text, txtMail.Text, ddlVendedor.Text, ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
-        cl.retrieve(query, CommandType.Text)
-        query = String.Format("declare @id varchar(10) set @id =(select apartado + convert(char,id) from folioApartados where orden='{0}') update excel  set nombre_cliente=@id where ord_num='{1}' ", ddlOrden.Text, ddlOrden.Text)
-        cl.retrieve(query, CommandType.Text)
-        query = String.Format("select nombre_cliente  from excel a join color_auto b on a.clave_2 =b.cve_color  where gpo_asig ='{0}'and anio_modelo ='{1}' and cve_color ='{2}' and paquete ='{3}' and ord_num='{4}'", ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
-        ds = cl.retrieve(query, CommandType.Text)
-        folio = ds.Tables(0).Rows(0)("nombre_cliente").ToString
-        Response.Write(String.Format("<script languaje=javascript> alert('Folio generado: {0} ' );</script>", folio))
+        If Page.IsValid Then
 
 
-        txtNombre.Text = ""
-        txtTelefono.Text = ""
-        txtMail.Text = ""
-        grdVista.Visible = False
-        ddlAnio.Items.Clear()
-        ddlColor.Items.Clear()
-        ddlPaquete.Items.Clear()
-        ddlOrden.Items.Clear()
-        txtNombre.Focus()
-        ddlModelo.SelectedIndex = 0
+            Dim cl As New Chevrolet
+            Dim ds As DataSet
+            Dim query As String
+            Dim folio As String
+
+            query = String.Format("insert into folioApartados values(substring(convert(char,GETDATE(),100),1,1)+substring(convert(char,GETDATE(),100),5,2)+substring(convert(char,GETDATE(),100),10,2),'{0}')", ddlOrden.Text)
+            cl.retrieve(query, CommandType.Text)
+            query = String.Format("declare @id varchar(10) set @id =(select apartado + convert(char,id) from folioApartados where orden='{0}') insert into apartados values (@id,'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','') ", ddlOrden.Text, txtNombre.Text, txtTelefono.Text, txtMail.Text, ddlVendedor.Text, ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
+            cl.retrieve(query, CommandType.Text)
+            query = String.Format("declare @id varchar(10) set @id =(select apartado + convert(char,id) from folioApartados where orden='{0}') update excel  set nombre_cliente=@id where ord_num='{1}' ", ddlOrden.Text, ddlOrden.Text)
+            cl.retrieve(query, CommandType.Text)
+            query = String.Format("select nombre_cliente  from excel a join color_auto b on a.clave_2 =b.cve_color  where gpo_asig ='{0}'and anio_modelo ='{1}' and cve_color ='{2}' and paquete ='{3}' and ord_num='{4}'", ddlModelo.Text, ddlAnio.Text, ddlColor.Text, ddlPaquete.Text, ddlOrden.Text)
+            ds = cl.retrieve(query, CommandType.Text)
+            folio = ds.Tables(0).Rows(0)("nombre_cliente").ToString
+            Response.Write(String.Format("<script languaje=javascript> alert('Folio generado: {0} ' );</script>", folio))
+
+
+            txtNombre.Text = ""
+            txtTelefono.Text = ""
+            txtMail.Text = ""
+            grdVista.Visible = False
+            ddlAnio.Items.Clear()
+            ddlColor.Items.Clear()
+            ddlPaquete.Items.Clear()
+            ddlOrden.Items.Clear()
+            txtNombre.Focus()
+            ddlModelo.SelectedIndex = 0
 
 
 
-
+        End If
 
     End Sub
 
@@ -213,4 +231,11 @@ Partial Class Alta_de_Apartado
 
 
 
+    Protected Sub CustomValidator1_ServerValidate(source As Object, args As ServerValidateEventArgs) Handles CustomValidator1.ServerValidate
+        args.IsValid = False
+        If ddlModelo.SelectedIndex = 0 Then
+        Else
+            args.IsValid = True
+        End If
+    End Sub
 End Class
