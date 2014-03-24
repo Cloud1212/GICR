@@ -17,7 +17,7 @@ Public Class Ayudante
         Return tamanio / base
     End Function
     Public Function extraeExtencion(ByRef nombreArchivo As String) As String
-        Dim regExp As New Regex(".\w+$")
+        Dim regExp As New Regex("\.[^\.]+$")
         Return regExp.Match(nombreArchivo).ToString
     End Function
     Public Function unicoID(ByRef texto As String) As String
