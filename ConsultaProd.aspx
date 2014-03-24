@@ -50,6 +50,7 @@
                 <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack="True" AppendDataBoundItems ="true"  >
                     <asp:ListItem>Modelo</asp:ListItem>
                 </asp:DropDownList>
+                            <asp:CustomValidator ID="CustomValidator1" ControlToValidate ="ddlModelo" runat="server" ErrorMessage="CustomValidator">*</asp:CustomValidator>
                             <asp:HyperLink ID="help1" runat="server" SkinID="helper" NavigateUrl="#" title="" 
                                 data-content="Modelo del vehico a consultar"
                                 data-original-title="Modelo"></asp:HyperLink>
@@ -151,7 +152,9 @@
             <td class="auto-style5">
                 <asp:Button ID="btnConsulta" runat="server" Text="Consultar" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
         </tr>
     </table>
 </asp:Content>
