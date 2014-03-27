@@ -32,8 +32,13 @@
 
         Dim query As String = "SELECT * FROM [Ordenfir$]"
         Dim ds As New Data.DataSet
+        Try
+            ds = con.retrieve(query, fileExcel:="Chevrolet")
+        Catch ex As Exception
+            Response.Write("<script languaje=javascript> alert('Archivo incorrecto');</script>")
+            Exit Function
+        End Try
 
-        ds = con.retrieve(query, fileExcel:="Chevrolet")
 
         GridView1.DataSource = ds
         GridView1.DataBind()
