@@ -56,14 +56,25 @@
               <tr>
                   <td class="auto-style9">&nbsp;</td>
                   <td class="auto-style5">
-                      <asp:DropDownList ID="ddlModelo" runat="server"  
+                      &nbsp;</td>
+                  <td class="auto-style7">
+                      &nbsp;</td>
+                  <td>&nbsp;</td>
+              </tr>
+              <tr>
+                  <td class="auto-style9">&nbsp;</td>
+                  <td class="auto-style5">
+                      <asp:DropDownList ID="ddlModelo" runat="server" AppendDataBoundItems ="true" AutoPostBack ="true"   
                              Visible ="false" >
+                          <asp:ListItem>Elija un modelo</asp:ListItem>
                       </asp:DropDownList>
                       <asp:HyperLink ID="help2" runat="server" SkinID="helper" NavigateUrl="#" title="" 
                           data-content="Escoje un modelo de carro al que se desea ver la información"
                           data-original-title="Modelo" Visible="false"></asp:HyperLink>
                   </td>
-                  <td class="auto-style7">&nbsp;</td>
+                  <td class="auto-style7">
+                      <asp:CustomValidator ID="CustomValidator1" ControlToValidate ="ddlModelo" runat="server" ErrorMessage="Elija un modelo de vehiculo">*</asp:CustomValidator>
+                  </td>
                   <td>&nbsp;</td>
               </tr>
               <tr>
