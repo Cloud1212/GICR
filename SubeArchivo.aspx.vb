@@ -28,15 +28,18 @@
 
         con._ruta = ruta
 
-        Dim query As String = "exec vaciaExcel"
+        
 
-        query = "SELECT * FROM [Ordenfir$]"
+        Dim query As String = "SELECT * FROM [Ordenfir$]"
         Dim ds As New Data.DataSet
 
         ds = con.retrieve(query, fileExcel:="Chevrolet")
 
         GridView1.DataSource = ds
         GridView1.DataBind()
+
+        query = "exec vaciaExcel"
+        con.retrieve(query)
 
         Dim queryInsert As String = "INSERT INTO excel VALUES "
         Dim queryIns As String = ""
