@@ -68,7 +68,7 @@ Partial Class GICR
                         Regex.Replace(reg("nom_Usuario").ToString.Trim, "\b\w", AddressOf upperCase) + _
                         " <b class=""caret""></b></a>" + Chr(10) + _
                         "<ul class=""dropdown-menu"">" + Chr(10) + _
-                        "<li><a href=""#""><span class=""glyphicon glyphicon-off""></span> Cerrar Sesion</a></li>" + Chr(10) + _
+                        "<li><a href=""./logout.aspx""><span class=""glyphicon glyphicon-off""></span> Cerrar Sesion</a></li>" + Chr(10) + _
                         "</ul>" + Chr(10) + _
                         "</li>"
         Else
