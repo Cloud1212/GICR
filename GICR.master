@@ -69,6 +69,7 @@
                             </asp:MenuItem>
                             <asp:MenuItem Text="Carline" Value="Carline">
                                 <asp:MenuItem NavigateUrl="~/CarlineAlta.aspx" Text="Alta de carline" Value="Alta de carline"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ModificarCarline.aspx" Text="Modificar Carline" Value="Modificar Carline"></asp:MenuItem>
                             </asp:MenuItem>
                         </Items>
                     </asp:Menu>

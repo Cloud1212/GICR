@@ -12,7 +12,7 @@ Partial Class CarlineAlta
         Dim query As String
 
         'se realiza la inserción del usuario
-        query = "insert into Carline values('{0}','{1}', '{2}', 1)"
+        query = "insert into Carline values('{0}','{1}', '{2}', Activo)"
         query = String.Format(query, txtCod.Text, TxtNom.Text, txtAno.Text)
         ds = cl.retrieve(query, CommandType.Text)
         Response.Write("<script languaje=javascript> alert('Carline ingresado con éxito');</script>")
@@ -27,4 +27,5 @@ Partial Class CarlineAlta
 
 
     End Sub
+
 End Class

@@ -35,6 +35,7 @@ Partial Class GICR
             adminstrador.Add("reporteapartados.aspx")
             adminstrador.Add("altavestiduras.aspx")
             adminstrador.Add("carlinealta.aspx")
+            adminstrador.Add("modificarcarline.aspx")
 
 
             'Listado de paginas visibles para ventas
