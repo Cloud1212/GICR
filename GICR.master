@@ -60,11 +60,15 @@
                                     <asp:MenuItem NavigateUrl="~/Color.aspx" Text="Alta color" Value="Color"></asp:MenuItem>
                                     <asp:MenuItem NavigateUrl="~/BajaColor .aspx" Text="Baja Color" Value="Baja Color"></asp:MenuItem>
                                 </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AltaVestiduras.aspx" Text="Vestiduras" Value="Vestiduras"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/SubeArchivo.aspx" Text="Carga de Archivos" Value="Carga de Archivos"></asp:MenuItem>
                             <asp:MenuItem Text="Consultas" Value="Consultas">
                                 <asp:MenuItem Text="Consulta de producto" Value="Consulta de producto" NavigateUrl="~/ConsultaProd.aspx"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ConsultaExist.aspx" Text="Consulta existencias" Value="Consulta existencias"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Carline" Value="Carline">
+                                <asp:MenuItem NavigateUrl="~/CarlineAlta.aspx" Text="Alta de carline" Value="Alta de carline"></asp:MenuItem>
                             </asp:MenuItem>
                         </Items>
                     </asp:Menu>
