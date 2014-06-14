@@ -30,16 +30,19 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:GridView ID="gvEdita" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="545px" DataSourceID="SqlDataSource1" DataKeyNames="cdgo_Usuarios">
+                <br />
+                <br />
+                <br />
+                <asp:GridView ID="gvEdita" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="545px" DataSourceID="SqlDataSource1" DataKeyNames="cdgo_Usuarios" CellSpacing="3">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
-                        <asp:CommandField ShowEditButton="True" />
-                        <asp:BoundField DataField="cdgo_Usuarios" HeaderText="cdgo_Usuarios" InsertVisible="False" ReadOnly="True" SortExpression="cdgo_Usuarios" />
-                        <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" ReadOnly="True" />
-                        <asp:BoundField DataField="nom_Usuario" HeaderText="nom_Usuario" SortExpression="nom_Usuario" />
-                        <asp:BoundField DataField="correo_Usuario" HeaderText="correo_Usuario" SortExpression="correo_Usuario" />
-                        <asp:BoundField DataField="perfil_Usuario" HeaderText="perfil_Usuario" SortExpression="perfil_Usuario" />
-                        <asp:BoundField DataField="status_Usuario" HeaderText="status_Usuario" SortExpression="status_Usuario" />
+                        <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" />
+                        <asp:BoundField DataField="nom_Usuario" HeaderText="Nombre Usuario" SortExpression="nom_Usuario" ReadOnly="True" />
+                        <asp:BoundField DataField="correo_Usuario" HeaderText="Correo" SortExpression="correo_Usuario" />
+                        <asp:BoundField DataField="perfil_Usuario" HeaderText="Perfil" SortExpression="perfil_Usuario" />
+                        <asp:BoundField DataField="status_Usuario" HeaderText="Status" SortExpression="status_Usuario" />
+                        <asp:BoundField DataField="cdgo_Usuarios" HeaderText="Codigo" SortExpression="cdgo_Usuarios" InsertVisible="False" ReadOnly="True" />
+                        <asp:CommandField ButtonType="Button" EditText="Editar" ShowEditButton="True" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -52,13 +55,12 @@
                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:conexion1 %>" SelectCommand="SELECT [Usuario], [nom_Usuario], [correo_Usuario], [perfil_Usuario], [status_Usuario], [cdgo_Usuarios] FROM [cr_Usuarios] WHERE ([Usuario] LIKE '%' + @Usuario + '%')" DeleteCommand="DELETE FROM [cr_Usuarios] WHERE [cdgo_Usuarios] = @cdgo_Usuarios" InsertCommand="INSERT INTO [cr_Usuarios] ([Usuario], [nom_Usuario], [correo_Usuario], [perfil_Usuario], [status_Usuario]) VALUES (@Usuario, @nom_Usuario, @correo_Usuario, @perfil_Usuario, @status_Usuario)" UpdateCommand="UPDATE [cr_Usuarios] SET [Usuario] = [Usuario], [nom_Usuario] = @nom_Usuario, [correo_Usuario] = @correo_Usuario, [perfil_Usuario] = @perfil_Usuario, [status_Usuario] = @status_Usuario WHERE [cdgo_Usuarios] = @cdgo_Usuarios">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GICRConnectionString %>" SelectCommand="SELECT [Usuario], [nom_Usuario], [correo_Usuario], [perfil_Usuario], [status_Usuario], [cdgo_Usuarios] FROM [cr_Usuarios] WHERE ([Usuario] LIKE '%' + @Usuario + '%')" DeleteCommand="DELETE FROM [cr_Usuarios] WHERE [cdgo_Usuarios] = @cdgo_Usuarios" InsertCommand="INSERT INTO [cr_Usuarios] ([Usuario],[correo_Usuario], [perfil_Usuario], [status_Usuario]) VALUES (@Usuario, @correo_Usuario, @perfil_Usuario, @status_Usuario)" UpdateCommand="UPDATE [cr_Usuarios] SET [Usuario] = [Usuario],[correo_Usuario] = @correo_Usuario, [perfil_Usuario] = @perfil_Usuario, [status_Usuario] = @status_Usuario WHERE [cdgo_Usuarios] = @cdgo_Usuarios">
                     <DeleteParameters>
                         <asp:Parameter Name="cdgo_Usuarios" Type="Decimal" />
                     </DeleteParameters>
                     <InsertParameters>
                         <asp:Parameter Name="Usuario" Type="String" />
-                        <asp:Parameter Name="nom_Usuario" Type="String" />
                         <asp:Parameter Name="correo_Usuario" Type="String" />
                         <asp:Parameter Name="perfil_Usuario" Type="String" />
                         <asp:Parameter Name="status_Usuario" Type="String" />
@@ -67,8 +69,6 @@
                         <asp:ControlParameter ControlID="txtUsuario" Name="Usuario" PropertyName="Text" Type="String" />
                     </SelectParameters>
                     <UpdateParameters>
-                        <asp:Parameter Name="Usuario" Type="String" />
-                        <asp:Parameter Name="nom_Usuario" Type="String" />
                         <asp:Parameter Name="correo_Usuario" Type="String" />
                         <asp:Parameter Name="perfil_Usuario" Type="String" />
                         <asp:Parameter Name="status_Usuario" Type="String" />
