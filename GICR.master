@@ -71,6 +71,9 @@
                                 <asp:MenuItem NavigateUrl="~/CarlineAlta.aspx" Text="Alta de carline" Value="Alta de carline"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ModificarCarline.aspx" Text="Modificar Carline" Value="Modificar Carline"></asp:MenuItem>
                             </asp:MenuItem>
+                            <asp:MenuItem Text="Columna" Value="Columna">
+                                <asp:MenuItem NavigateUrl="~/columna.aspx" Text="Columna" Value="Columna"></asp:MenuItem>
+                            </asp:MenuItem>
                         </Items>
                     </asp:Menu>
 	            </div>
