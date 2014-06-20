@@ -65,7 +65,6 @@ Partial Class GICR
             If Not permisos(reg("perfil_Usuario").ToString).Contains(url) Then termina_session()
 
             htmlMenu = mnuToHTML(Menu1, permisos(reg("perfil_Usuario").ToString))
-            Menu1.Items.Clear()
             htmlUser = "<li class=""dropdown"">" + Chr(10) + _
                         "<a href=""#"" class=""dropdown-toggle"" data-toggle=""dropdown"">" + _
                         "<span class=""glyphicon glyphicon-user""></span> " + _

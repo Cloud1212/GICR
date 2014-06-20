@@ -34,7 +34,7 @@
                             <% Response.Write(htmlUser)%>
                         </ul>
                     </div>
-                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="10px" DynamicHorizontalOffset="3" StaticDisplayLevels="1">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="10px" DynamicHorizontalOffset="3" StaticDisplayLevels="1" CssClass="hidden">
                         <Items>
                             <asp:MenuItem NavigateUrl="~/Inicio.aspx" Text="INICIO" Value="INICIO"></asp:MenuItem>
                             <asp:MenuItem Text="Administración de usuarios" Value="A$dministración de usuarios">
