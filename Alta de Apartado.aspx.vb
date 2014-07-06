@@ -119,15 +119,15 @@ Partial Class Alta_de_Apartado
         Dim ds As DataSet
         Dim query As String
 
-        query = String.Format("select claveVestidura,descVestidura from excel a join vestiduras b on a.vestidura=b.claveVestidura where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by claveVestidura,descVestidura order by descVestidura", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
+        query = String.Format("select Vestidura+'/'+isnull(descVestidura,'') descVestidura,vestidura  from excel a left join vestiduras b on a.vestidura=b.claveVestidura where gpo_asig='{0}' and clave_2='{1}' and anio_modelo='{2}' and paquete ='{3}' and  nombre_cliente='' group by Vestidura,descVestidura order by descVestidura", ddlModelo.Text, ddlColor.SelectedValue, ddlAnio.Text, ddlPaquete.Text)
         ds = cl.retrieve(query, CommandType.Text)
         ddlVestiduras.DataSource = ds
-        ddlVestiduras.DataValueField = "claveVestidura"
+        ddlVestiduras.DataValueField = "vestidura"
         ddlVestiduras.DataTextField = "descVestidura"
         ddlVestiduras.DataBind()
     End Sub
     Protected Sub ddlModelo_TextChanged(sender As Object, e As EventArgs) Handles ddlModelo.TextChanged
-        
+
         If ddlModelo.SelectedIndex <> 0 Then
             llenaPaquete()
             llenaAnio()
@@ -139,9 +139,9 @@ Partial Class Alta_de_Apartado
     End Sub
 
     Protected Sub ddlAnio_TextChanged(sender As Object, e As EventArgs) Handles ddlAnio.TextChanged
-        
+
         If ddlModelo.SelectedIndex <> 0 Then
-            
+
 
             llenaColor()
             llenaVestiduras()
@@ -151,10 +151,10 @@ Partial Class Alta_de_Apartado
     End Sub
 
     Protected Sub ddlColor_TextChanged(sender As Object, e As EventArgs) Handles ddlColor.TextChanged
-        
+
 
         If ddlModelo.SelectedIndex <> 0 Then
-            
+
             llenaVestiduras()
             llenaOrden()
 
@@ -163,7 +163,7 @@ Partial Class Alta_de_Apartado
     End Sub
 
     Protected Sub ddlPaquete_TextChanged(sender As Object, e As EventArgs) Handles ddlPaquete.TextChanged
-        
+
         If ddlModelo.SelectedIndex <> 0 Then
             llenaAnio()
             llenaColor()
@@ -242,7 +242,7 @@ Partial Class Alta_de_Apartado
 
     Protected Sub ddlVestiduras_TextChanged(sender As Object, e As EventArgs) Handles ddlVestiduras.TextChanged
         If ddlModelo.SelectedIndex <> 0 Then
-            
+
             llenaOrden()
 
         End If

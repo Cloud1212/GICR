@@ -44,6 +44,14 @@
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">Teléfono:</td>
             <td class="auto-style1">
                 <asp:TextBox ID="txtTelefono" runat="server" Width="141px" MaxLength="10"></asp:TextBox>
@@ -55,6 +63,14 @@
                     data-content="Telefono de contacto con el cliente"
                     data-original-title="Telefono"></asp:HyperLink>
             </td>
+        </tr>
+        <tr>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style4">&nbsp;</td>
@@ -206,7 +222,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="6">
+            <td class="auto-style5">
+                &nbsp;</td>
+            <td class="auto-style5" colspan="5">
                 <asp:GridView ID="grdVista" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="748px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
