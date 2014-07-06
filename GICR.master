@@ -4,6 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server" class ="container" >
+    <script src="./js/jquery-2.1.0.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/helper.js"></script>
     <title></title>
     <meta charset="utf-8" />  
     <link href="App_Themes/css/bootstrap.css" rel="stylesheet" />
@@ -82,8 +85,6 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    <script src="./js/jquery-2.1.0.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/helper.js"></script>
+    
 </body>
 </html>
