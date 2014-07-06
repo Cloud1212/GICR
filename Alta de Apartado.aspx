@@ -124,11 +124,35 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style5">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style5">
+                Modelo</td>
+            <td>Paquete</td>
+            <td>Año</td>
+            <td>Color</td>
+            <td>Vestidura</td>
+            <td>Orden</td>
         </tr>
         <tr>
             <td class="auto-style5">
                 <asp:DropDownList ID="ddlModelo" runat="server" AutoPostBack ="true" AppendDataBoundItems ="true" >
                     <asp:ListItem Value="0">Seleccione un modelo</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td>
+                <asp:DropDownList ID="ddlPaquete" runat="server" AutoPostBack ="true"  >
+                    <asp:ListItem Value="0">Seleccione paquete</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
@@ -142,8 +166,8 @@
                 </asp:DropDownList>
             </td>
             <td>
-                <asp:DropDownList ID="ddlPaquete" runat="server" AutoPostBack ="true"  >
-                    <asp:ListItem Value="0">Seleccione paquete</asp:ListItem>
+                <asp:DropDownList ID="ddlVestiduras" runat="server" AutoPostBack ="true"  Height="16px">
+                    <asp:ListItem Value="0">Elija una vestidura</asp:ListItem>
                 </asp:DropDownList>
             </td>
             <td>
@@ -160,11 +184,13 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">
                 <asp:Button ID="btnPrevia" runat="server" Text="Vista" />
             </td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -177,9 +203,10 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="5">
+            <td class="auto-style5" colspan="6">
                 <asp:GridView ID="grdVista" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="748px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -203,11 +230,11 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="5">
+            <td class="auto-style5" colspan="6">
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="5">
+            <td class="auto-style5" colspan="6">
                 <asp:Button ID="btnAparta" runat="server" Text="Genera apartado" />
             </td>
         </tr>
