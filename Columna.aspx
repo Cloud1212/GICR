@@ -9,9 +9,10 @@
         $(document).ready(function () {
             
             //alert("Jquery instaldo correctamente");
+
             $.ajax({
                 type: "POST",
-                url: "http://localhost:1165/Columna.aspx/llenaTablaColumnas",
+                url: location.protocol + "//" + location.host + "/GICR/Columna.aspx/llenaTablaColumnas",
                 data: "{}",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -22,7 +23,8 @@
                     $('#example').dataTable({
                         "bFilter": false,
                         "bLengthChange": false,
-                        "data": data.d
+                        "data": data.d,
+                        "bPaginate": false
                     });
                 }
             }).fail(function (xxh) {

@@ -21,7 +21,7 @@ Partial Class Columna
         'Return li
 
         Dim cadena As String
-        cadena = "Data Source=BENITO-PC\MSSQLSERVER_2008;Initial Catalog=GICR;Integrated Security=True"
+        cadena = "Data Source=WIN-IBPLMV5IUHM;Initial Catalog=GICR;Integrated Security=True"
         Dim conn As SqlConnection = New SqlConnection(cadena)
         conn.Open()
         Dim testCmd As SqlCommand = New SqlCommand("obtenerTablaColumna", conn)
