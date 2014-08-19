@@ -49,3 +49,17 @@ p.porcentaje
 from #tempUpdate p inner join columnaModelos on p.codigoCarro=columnaModelos.codigoCarro
 and columnaModelos.statusCarline='activo'
 drop table #tempUpdate
+
+
+ALTER PROCEDURE [dbo].[obtenerTablaColumna]
+AS
+BEGIN
+	SELECT  /*CONVERT(VARCHAR,codigoCarro) AS codigoCarro,*/ISNULL(nombreCarro,'') AS nombreCarro,
+	'<input id="'+CONVERT(VARCHAR,codigoCarro)+'" 
+	onchange="editarCarro('
+	+CONVERT(VARCHAR,codigoCarro)+
+	');" type="text" value="'+ISNULL(CONVERT(VARCHAR,CantidadCarros),0)+'"></input>' AS CantidadCarros,
+	'<span id="'++CONVERT(VARCHAR,codigoCarro)++'_porc"> '+ISNULL(CONVERT(VARCHAR,ParticipacionIndividual),0) +'%</span>' AS ParticipacionIndividual,
+	CONVERT(VARCHAR,participacionindividual) as cantidadPorcentaje
+	FROM columnaModelos
+END	

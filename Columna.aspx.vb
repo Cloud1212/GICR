@@ -49,4 +49,38 @@ Partial Class Columna
 
     End Function
 
+    <System.Web.Services.WebMethod()>
+    Public Shared Function editaModeloCarline(codigo As Integer, cantidad As Integer) As Boolean
+        Dim seActualizo As Boolean
+        seActualizo = False
+
+        'cad = "BGR test"
+        'Dim li As New List(Of Array)
+        'For index As Integer = 1 To 5
+        '    Dim especificador As String
+
+        '    Dim n() As String = {"bgr", "err"}
+
+        '    li.Add(n)
+        'Next
+
+        'Return li
+
+        Dim cadena As String
+        cadena = "Data Source=WIN-IBPLMV5IUHM;Initial Catalog=GICR;Integrated Security=True"
+        Dim conn As SqlConnection = New SqlConnection(cadena)
+        conn.Open()
+        Dim testCmd As SqlCommand = New SqlCommand("guardaCatindadColumna", conn)
+        testCmd.CommandType = CommandType.StoredProcedure
+        testCmd.Parameters.AddWithValue("@cantidad", cantidad)
+        testCmd.Parameters.AddWithValue("@codigoCarro", codigo)
+        If (testCmd.ExecuteNonQuery() > 0) Then
+            seActualizo = True
+
+        End If
+        conn.Close()
+
+        Return seActualizo
+
+    End Function
 End Class
